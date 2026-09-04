@@ -1,0 +1,6 @@
+.venv/
+_pycache_/
+.ipynb_checkpoints/
+*.pyc
+customer_booking.csv
+git 

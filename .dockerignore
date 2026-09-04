@@ -1,0 +1,12 @@
+.git
+venv/
+.venv/
+env/
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.ipynb
+.ipynb_checkpoints/
+customer_booking.csv
