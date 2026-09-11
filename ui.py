@@ -97,6 +97,14 @@ except Exception as e:
     )
 
     st.stop()
+    
+        # LOAD ROUTE & ORIGIN OPTIONS
+
+route_map = joblib.load("route_encoding_map.pkl")
+origin_map = joblib.load("origin_encoding_map.pkl")
+
+route_options = sorted(route_map.keys())
+origin_options = sorted(origin_map.keys())
 
 
 # HEADER
@@ -268,16 +276,16 @@ loc1, loc2 = st.columns(2)
 
 with loc1:
 
-    booking_origin = st.text_input(
+    booking_origin = st.selectbox(
         "Booking Origin",
-        value="Australia"
+        origin_options
     )
 
 with loc2:
 
-    route = st.text_input(
+    route = st.selectbox(
         "Route",
-        value="AKL-SYD"
+        route_options
     )
 
 
